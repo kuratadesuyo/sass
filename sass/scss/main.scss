@@ -1,0 +1,94 @@
+/* MEMO: 3 comment */
+
+/*
+comment
+comment
+comment
+*/
+
+// comment
+
+// MEMO: 4 & Is the parent selector
+// MEMO: 5 variable is $baseFontSize
+// MEMO: 6 string,s variable is $imgDir
+// MEMO: 7 color,s variable is $brandColor0 or 1
+// MEMO: 8 if else boolean
+// MEMO: 9 while for. like bootstrap
+// MEMO: 10 list
+// MEMO: 11 function
+// MEMO: 13 fail management
+// MEMO: 14 mixin
+// MEMO: 15 extend *mixin is Difference
+
+@import "setting";
+@import "functions";
+
+@mixin round($radius:4px) {
+    border-radius: $radius;
+}
+
+#main {
+    @if $debugMode < 20 {
+        width: 90%;
+        /* background: url($imgDir + "bg.png"); */
+        background: url("#{$imgDir}bg.png");
+        p {
+            /* color: $brandColor0; */
+            color: lighten($brandColor0, 30%);
+            font-size: $baseFontSize;
+            .sub {
+                font-size: $baseFontSize - 2px;
+            }
+            a {
+                text-decoration: none;
+                &:hover {
+                    font-weight: bold;
+                }
+            }
+        }
+    }@else{
+        // @for $i from 0 through 14 {
+        //    .fs#{$i} { font-size: #{$i}px; }
+        // }
+
+        $i: 10;
+        @while $i <= 14 {
+          .fs#{$i} { font-size: #{$i}px; }
+          $i: $i + 1;
+        }
+
+        // @each $animal in $animals {
+        //     .#{$animal}-icon { background: url("#{$animal}.png"); }
+        // }
+
+        @each $animal in cat, dog, tiger {
+            .#{$animal}-icon { background: url("#{$animal}.png"); }
+        }
+
+        .grid {
+            width: getColumnWidth($totalWidth, $columnCount);
+            @include round(15px);
+        }
+
+        label {
+            @include round();
+        }
+
+        .msg {
+            font-size: 12px;
+            font-weight: bold;
+            padding: 2px 4px;
+            color: white;
+        }
+
+        .errorMsg {
+            @extend .msg;
+            background: red;
+        }
+
+        .warningMsg {
+            @extend .msg;
+            background: orange;
+        }
+    }
+}

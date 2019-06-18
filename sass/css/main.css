@@ -1,0 +1,51 @@
+/* MEMO: 3 comment */
+/*
+comment
+comment
+comment
+*/
+#main .fs10 {
+  font-size: 10px;
+}
+#main .fs11 {
+  font-size: 11px;
+}
+#main .fs12 {
+  font-size: 12px;
+}
+#main .fs13 {
+  font-size: 13px;
+}
+#main .fs14 {
+  font-size: 14px;
+}
+#main .cat-icon {
+  background: url("cat.png");
+}
+#main .dog-icon {
+  background: url("dog.png");
+}
+#main .tiger-icon {
+  background: url("tiger.png");
+}
+#main .grid {
+  width: 85px;
+  border-radius: 15px;
+}
+#main label {
+  border-radius: 4px;
+}
+#main .msg, #main .errorMsg, #main .warningMsg {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 4px;
+  color: white;
+}
+#main .errorMsg {
+  background: red;
+}
+#main .warningMsg {
+  background: orange;
+}
+
+/*# sourceMappingURL=main.css.map */
