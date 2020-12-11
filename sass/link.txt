@@ -2,3 +2,6 @@
 
 // https://helog.jp/development/windows-node-sass/
 // https://qiita.com/rana_kualu/items/96b303307d6435aedf8b MEMO: npm Repository
+  
+// cssの圧縮  
+https://qiita.com/miminari/items/50d8695c59ebf71b2307  
